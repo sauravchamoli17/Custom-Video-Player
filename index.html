@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom HTML5 Video Player</title>
-    <link rel="stylesheet" href="style.css">\
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="player">
-        <video class="player__video-viewer" src="BigBuckBunny.mp4" autoplay controls></video>
+        <video class="player__video-viewer" src="BigBuckBunny.mp4" controls></video>
         <!-- Video Player Controls  -->
         <div class="player__controls">
             <!-- Progress Bar -->
             <div class="progress">
                 <div class="progress__filled"></div>
             </div>
-           <button class="player__button-toggle" title="Toggle Play">⏯</button>
+           <button class="player__button-toggle" title="Toggle Play">▶</button>
+           <!-- Volume Slider -->
+           <input type="range" class="player__slider" name="volume" min="0" max="1" step="0.05" value="1">
+           <!-- Playback Rate -->
+           <input type="range" class="player__slider" name="playbackRate" min="0.5" max="2" step="0.1" value="1">
+           
         </div>
     </div>
     <script src="main.js"></script>
