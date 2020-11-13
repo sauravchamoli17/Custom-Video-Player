@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   background: #7A419B;
   min-height: 100vh;
-  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+  background: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128,162,245,1) 91.1% );
   background-size: cover;
   justify-content: center;
   align-items: center;
@@ -29,8 +29,8 @@ h1{
 
 .player {
   max-width: 750px;
-  border: 5px solid rgba(0,0,0,0.2);
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border: 5px solid rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
   position: relative;
   font-size: 0;
   overflow: hidden;
@@ -52,15 +52,18 @@ h1{
 }
 
 .player__button {
-  background: none;
+  background: rgba(0, 0, 0, 0);
+  font-family: Calibre;
+  font-size:20px;
+  display:flex;
+  justify-content: space-around;
   border: 0;
   line-height: 1;
   color: white;
   text-align: center;
   outline: 0;
-  padding: 0;
+  padding: 8px 0px 8px 0px;
   cursor: pointer;
-  max-width: 30px;
 }
 
 .player__button:focus {
@@ -74,13 +77,14 @@ h1{
 
 .player__controls {
   display: flex;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
   width: 100%;
   transform: translateY(100%) translateY(-5px);
   transition: all .3s;
   flex-wrap: wrap;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.4);
 }
 
 .player:hover .player__controls {
@@ -92,7 +96,28 @@ h1{
 }
 
 .player__controls > * {
-  flex: 1;
+  width:18%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.player__options{
+  display:flex;
+  justify-content: space-around;
+  width:80%;
+}
+
+.player__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 110px;
+}
+
+.player__item img{
+  width:28px;
+  height:28px;
 }
 
 .progress {
@@ -110,7 +135,7 @@ h1{
   width: 50%;
   background: #ffc600;
   flex: 0;
-  flex-basis: 50%;
+  flex-basis: 0%;
 }
 
 /* unholy css to style input type="range" */
@@ -119,7 +144,7 @@ input[type=range] {
   -webkit-appearance: none;
   background: transparent;
   width: 100%;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 
 input[type=range]:focus {

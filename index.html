@@ -10,23 +10,52 @@
 <body>
     <h1>Custom HTML5 Video Player</h1>
     <div class="player">
-        <video class="player__video" src="BigBuckBunny.mp4"></video>
+        <video class="player__video" src="BigBuckBunny.mp4" poster="thumbnail.png" autoplay></video>
+        
         <!-- Video Player Controls  -->
         <div class="player__controls">
-            <!-- Progress Bar -->
+            
+          <!-- Progress Bar -->
             <div class="progress">
                 <div class="progress__filled"></div>
             </div>
-           <button class="player__button-toggle" title="Toggle Play">▶</button>
-           <!-- Volume Slider -->
-           <input type="range" class="player__slider" name="volume" min="0" max="1" step="0.05" value="1">
-           <!-- Playback Rate -->
-           <input type="range" class="player__slider" name="playbackRate" min="0.5" max="2" step="0.1" value="1">
-           <!-- Skip Backward -->
-           <button data-skip="-10" class="player__button"><< 10s</button>
-           <!-- Skip Forward -->
-           <button data-skip="25" class="player__button">25s >></button>
-        </div>
+
+              <button class="player__button-toggle" title="Toggle Play">▶</button>
+            
+             <div class="player__options">
+                      <!-- Volume Slider -->
+                <div class="player__item" title="Volume Slider" id="volume">
+                  <img src="./icons/volume_up-white-48dp.svg" alt="Volume Slider" title="Volume Slider">
+                  <input type="range" class="player__slider" name="volume" min="0" max="1" step="0.05" value="1">
+                </div>
+                
+                <!-- Playback Rate -->
+                <div class="player__item" title="Speed Slider">
+                  <img src="./icons/speed-white-48dp.svg" alt="Speed Slider" title="Speed Slider">
+                  <input type="range" class="player__slider" name="playbackRate" min="0.5" max="2" step="0.1" value="1">             
+                </div>
+                
+                <!-- Skip Backward -->
+                <div class="player__item">
+                  <button data-skip="-10" class="player__button" title="Skip Backward 10s">
+                      <img src="./icons/replay_10-white-48dp.svg" alt="Skip Backward 10s" title="Skip Backward 10s">
+                  </button>                     
+                </div>
+                
+                <!-- Skip Forward -->
+                <div class="player__item">
+                    <button data-skip="30" class="player__button" title="Skip Forward 30s">
+                      <img src="./icons/forward_30-white-48dp.svg" alt="Forward 30s" title="Forward 30s">
+                    </button>
+                </div>
+
+                <!-- Full Screen --> 
+                  <div class="player__item">
+                    <img src="./icons/fullscreen-white-48dp.svg" class="full__screen" alt="Full Screen" title="Full Screen"> 
+                  </div>
+             </div>
+           
+          </div><!-- Player Controls Closed -->
     </div>
     <script src="main.js"></script>
 </body>
